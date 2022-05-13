@@ -1,0 +1,25 @@
+    For game set up, we included the following tests:
+ -
+    For the actual game run time, we included the following tests:
+ - a test to check if proper projectile amounts are spawned
+ - a test to see if waves are spawned correctly
+
+  testWaveSpawn()
+     This test was made to ensure that the correct amount of enemies are spawned per wave. Enemies are initialized
+     without an image using a default constructor to prevent un-initalized graphics errors. A wave of enemies should be
+     instantiated with arbitrary position properties
+
+  testProjectileSpawn()
+     This test ensures that projectiles are spawned correctly for each tower shot. An arbitrary integer is passed in
+     and the check ensures that a correct number of projectiles are initialized and added to an active array. This functions
+     similarly to the testWaveSpawn() test, however checks for the projectile object rather than an enemy object.
+
+  checkProjectileCollison()
+     The purpose of this test is to ensure the projectile/enemy collision detection system functions correctly.
+
+  checkEnemyHealthUponCollision()
+     This test verifies that enemies take damage correctly when the game detects a collision with a projectile.
+
+  testRangeChecker()
+     This test serves to check the range checker, to ensure that it works correctly. With a few inputs, we can ensure
+     that it returns true when an enemy is in range of a tower, and false when the enemy is not.

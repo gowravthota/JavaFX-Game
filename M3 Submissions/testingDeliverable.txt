@@ -1,0 +1,50 @@
+    For game set up, we included the following tests:
+ - a test for base tower price
+ - a game difficulty test
+ - a base money test
+ - a base health test
+    For the actual game runtime, we included the following tests:
+ - an update of player money upon purchase test
+ - a check of tower position upon placement
+ - a check of tower orientation on placement
+ - a check of tower type on placement
+
+ getTowerPrice()
+    This test was made to ensure that the appropriate tower price was set with each difficulty. This would
+    validate our requirement of having varying tower prices. The price of the tower remains constant between the types,
+    however ascends in price as the difficulty increases.
+
+ checkTowerType()
+    This test ensures that correct tower type is set upon placement of a tower. This was added in response to our
+    requirement of at least 3 different tower types to ensure proper procedure of the buy tower function.
+
+ buyTowerUpdatesMoney()
+    This test ensures that the actual player money is updated upon the purchase of a tower beyond the label set on
+    the game screen. The test makes sure that the player attribute itself is changed along with the display.
+
+ getGameHealth()
+    This test was made to ensure that the appropriate player health was set with each difficulty. This would
+    validate our requirement of having varying difficulty in some way. The health of the player descends with
+    ascending difficulty.
+
+ getGameDifficulty()
+    The game itself functions with the difficulty set as a specified integer between 1 - 3. This test serves as a
+    constructor check for the initialization of the main game. It ensures appropriate transition between input and
+    actual game initialization.
+
+ checkTowerPos()
+     This test ensures that correct tower position is set upon the calling of the placeTower function. While normally
+     this would be simulated with a mouse position, it's instead done with a given x and y value during testing to ensure
+     that the position value itself is set beyond just visual implementation, and rather is embedded as an attribute
+     of the tower class itself.
+
+ checkTowerOrientation()
+     This test ensures that correct tower orientation is set upon the calling of the placeTower function. While normally
+     this would be simulated with a mouse right click, it's instead done with a given oritnetation during testing to ensure
+     that the rotation value itself is set beyond just visual implementation, and rather is embedded as an attribute
+     of the tower class itself.
+      
+ getTowerPrice()
+    This test was made to ensure that the appropriate base money was set with each difficulty. This would
+    validate our requirement of having varying difficulties by changing the starting attributes of the player. With
+    ascending difficulty, the player is granted a descending amount of starting cash.

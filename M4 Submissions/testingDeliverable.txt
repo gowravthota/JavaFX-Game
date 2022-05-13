@@ -1,0 +1,43 @@
+    For game set up, we included the following tests:
+ - a test for enemy path creation
+ - a test for modular path creation by reading from file
+
+    For the actual game run time, we included the following tests:
+ - an update of the monument health upon being attacked
+ - a test for whether or not combat is in progress
+ - a test if game over occurs at the correct condition
+ - a test for if combat state updates properly
+ - a check of the collision detection with the path
+ - a check of the collision detection with two towers
+ 
+ checkWayPointCreation()
+    This test was made to ensure that the checkpoints of the enemies can be modularized with data read from files. If
+    the path of the enemies were required to be changed in future implementation, it could be done efficiently through
+    a modification of the waypoint.txt file
+
+ checkPathCreation()
+    This test ensures that the path of the enemies is created properly from the checkpoints made from waypoint.txt. Unlike
+    checkWayPointCreation(), this test is for the actual continuous line of movement of the enemies rather than a collection
+    of loose checkpoints that the enemies need to reach individually
+
+ enemyAttacksMonument()
+    This test makes sure that the monument health updates when an enemy has attacked. Based on the attack damage of the enemy 
+    the health should be updated appropriately.
+ 
+ inCombat()
+    This test reflects combat states. If combat has not yet started, the combat state should be false. If combat has started and
+    monument health is not <=0 then combat state should be true.
+
+ correctGameOver()
+    This test verifies that game over is triggered when it is supposed to. It starts combat and subtracts one life at a time,
+    and checks that combat ends exactly when the final life is lost.
+
+combatStarts()
+    This test reflects initial combat states. States will only change once combat has started. If combat has started then true, else false
+
+testTowerOnPath()
+    This tower checks the path collision detection by placing a few test towers. It returns true if a tower collides with the track,
+    false if no issue.
+
+testTowerOnTower()
+    This test reflects if 2 towers have the same location. If 2 towers have the same location return true, else return false

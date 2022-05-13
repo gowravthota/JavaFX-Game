@@ -1,0 +1,16 @@
+
+  testBossSpawn()
+     This test was made to ensure that the correct amount of bosses are spawned per wave. Bosses are initialized
+     without an image using a default constructor to prevent un-initalized graphics errors. A wave of bosses should be
+     instantiated with arbitrary position properties
+
+  checkStartingTowerAttributes()
+     This test ensures that towers are spawned with the correct range and damage. This test was included in this
+     milestone because a test for these values would be redundant in prior milestones. Now, with the inclusion of
+     tower upgrades, the test serves to regulate the base case of the towers.
+
+testBossHealthGreaterThanEnemy()
+	This test was created to ensure that the boss is harder to kill given it should have a higher health than a regular enemy.
+
+testMoneyEarnedinGame()
+	This test was created to check if money increases once the game has gone into combat. Money should not increase if the game has not gone into combat.
